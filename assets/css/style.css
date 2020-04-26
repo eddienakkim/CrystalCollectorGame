@@ -14,10 +14,12 @@ hr{
 }
 
 .jumbotron h1{
-    color: white
+    color: white;
+    font-family: 'Poppins', sans-serif;
 } 
 .jumbotron p{
-    color: white
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .img-thumbnail{        
@@ -27,4 +29,12 @@ hr{
     height: 2px;
     background-color: black;
     border: none;
+}
+
+#box h4{
+    font-family: 'Bangers', cursive;
+}
+
+#reset {
+    font-family: 'Bangers', cursive;
 }
