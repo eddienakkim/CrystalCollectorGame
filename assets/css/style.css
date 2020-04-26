@@ -9,11 +9,8 @@ hr{
 .jumbotron {
     background-image: url(https://scitechdaily.com/images/Molecules-Integrate-into-Crystal.jpg);
 }
-#randomnum {
-    background-color: orange;
-}
-#score {
-    background-color: palegreen;
+#box {
+    background-color: white;
 }
 
 .jumbotron h1{
@@ -21,4 +18,13 @@ hr{
 } 
 .jumbotron p{
     color: white
+}
+
+.img-thumbnail{        
+    width : 75%;
+}
+#box hr {
+    height: 2px;
+    background-color: black;
+    border: none;
 }
