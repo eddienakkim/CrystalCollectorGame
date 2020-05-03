@@ -8,7 +8,6 @@ var yellow = Math.floor(Math.random() * 12) + 1;
 
 var wins = 0;
 var losses = 0;
-
 var totalScore = 0;
 $("#user").text(totalScore);
 
