@@ -1,102 +1,101 @@
-var compNum = Math.floor(Math.random()*(120-19)+1)+19;
-$("#randomnum").text(compNum)
+ //Generating a random number between 19 and 120
+ compNum = Math.floor(Math.random()*101+19);
+$("#randomnum").text(compNum);
 
-var grey = Math.floor(Math.random() * 12) + 1;
-var red = Math.floor(Math.random() * 12) + 1;
-var green = Math.floor(Math.random() * 12) + 1;
-var yellow = Math.floor(Math.random() * 12) + 1;
+//Each crystral will generate random number between 1 and 12
+ grey = Math.floor(Math.random()*11+1);
+ red = Math.floor(Math.random()*11+1);
+ green = Math.floor(Math.random()*11+1);
+ yellow = Math.floor(Math.random()*11+1);
 
-var wins = 0;
-var losses = 0;
-var totalScore = 0;
-$("#user").text(totalScore);
+ //Setting initial value to the variables and putting on HTML to show user
+ userTot = 0;
+ win = 0;
+ lose = 0;
+$("#user").text(userTot);
+$("#win").text("Wins: "+win);
+$("#losses").text("Losses: "+lose);
 
-function win(){
-  wins = wins + 1;
-        $('#win').text("Wins: " + wins);
-        reset();
+
+//This function will trigger when the game is done for new game.
+function restart() {
+   compNum = Math.floor(Math.random()*101+19)
+   grey = Math.floor(Math.random()*11+1)
+   red = Math.floor(Math.random()*11+1)
+   green = Math.floor(Math.random()*11+1)
+   yellow = Math.floor(Math.random()*11+1)
+   userTot = 0
+  $("#randomnum").text(compNum)
+  $("#user").text(userTot)
 }
 
-function lose(){
-  losses = losses + 1;
-        $('#losses').text("Losses: " + losses);
-        reset();
+//These functions will increase the number of wins/losses depends on the result of if/else statement
+function winner(){
+  win++;
+  $("#win").text("Wins: "+win);
 }
 
-$('#grey').on("click", function(){
-  totalScore = totalScore + grey
-  $('#user').text(totalScore);
-  if (totalScore === compNum) {
-      win();
-      reset();
-  } 
-  else if (totalScore > compNum) {
-      lose();
-      reset();
-  }
-})
+function losser(){
+  lose++;
+  $("#losses").text("Losses: "+lose);
+}
 
-$('#red').on("click", function(){
-  totalScore = totalScore + red
-  $('#user').text(totalScore);
-  if (totalScore === compNum) {
-      win();
-      reset();
-  } 
-  else if (totalScore > compNum) {
-      lose();
-      reset();
+//Assigning each crystals with what to do when they are clicked. It will determine if the user wins or lose in comparison of user# and computer#
+$("#grey").on("click", function(){
+  userTot = userTot + grey
+  $("#user").text(userTot)
+  if (userTot == compNum){
+    winner()
+    restart()
   }
-})
+  else if (userTot > compNum){
+    losser()
+    restart()
+  }})
 
-$('#green').on("click", function(){
-  totalScore = totalScore + green
-  $('#user').text(totalScore);
-  if (totalScore === compNum) {
-      win();
-      reset();
-  } 
-  else if (totalScore > compNum) {
-      lose();
-      reset();
+$("#red").on("click", function(){
+  userTot = userTot + red
+  $("#user").text(userTot)
+  if (userTot == compNum){
+    winner()
+    restart()
   }
-})
+  else if (userTot > compNum){
+    losser()
+    restart()
+  }})
 
-$('#yellow').on("click", function(){
-  totalScore = totalScore + yellow
-  $('#user').text(totalScore);
-  if (totalScore === compNum) {
-      win();
-      reset();
-  } 
-  else if (totalScore > compNum) {
-      lose();
-      reset();
+$("#green").on("click", function(){
+  userTot = userTot + green
+  $("#user").text(userTot)
+  if (userTot == compNum){
+    winner()
+    restart()
   }
-})
+  else if (userTot > compNum){
+    losser()
+    restart()
+  }})
 
+  $("#yellow").on("click", function(){
+  userTot = userTot + yellow
+  $("#user").text(userTot)
+  if (userTot == compNum){
+    winner()
+    restart()
+  }
+  else if (userTot > compNum){
+    losser()
+    restart()
+  }})
+  
+
+//Once pressed, it will reset the whole game/score board
 $("#reset").on("click", function(){
-  totalScore = 0;
-  wins = 0;
-  losses = 0;
-  $('#user').text(totalScore);
-  $('#wins').text("Wins: " + wins);
-  $('#losses').text("Losses: " + losses);
-  var compNum = Math.floor(Math.random()*(120-19)+1)+19;
-  $("#randomnum").text(compNum)
-  var grey = Math.floor(Math.random() * 12) + 1;
-  var red = Math.floor(Math.random() * 12) + 1;
-  var green = Math.floor(Math.random() * 12) + 1;
-  var yellow = Math.floor(Math.random() * 12) + 1;
+  restart()
+  win = 0;
+  lose = 0;
+  $("#user").text(userTot);
+  $("#win").text("Wins: "+win);
+  $("#losses").text("Losses: "+lose);
 })
-
-
-function reset() {
-  totalScore = 0;
-  var compNum = Math.floor(Math.random()*(120-19)+1)+19;
-  $("#randomnum").text(compNum)
-  var grey = Math.floor(Math.random() * 12) + 1;
-  var red = Math.floor(Math.random() * 12) + 1;
-  var green = Math.floor(Math.random() * 12) + 1;
-  var yellow = Math.floor(Math.random() * 12) + 1;
-}
