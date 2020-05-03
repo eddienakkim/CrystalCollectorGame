@@ -5,11 +5,10 @@
     <title>Crystal Collector Game</title>
     <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans+Condensed:wght@300&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-
 </head>
 <body>
     <div class="jumbotron">
@@ -24,20 +23,18 @@
         <div class="row justify-content-center align-self-center">
             <div class="col-md-4 m-3 pt-4" style="height: 225px;" id="box">
                 <h4>Target Number</h4>
-                <div id="randomnum">Random #
-
+                <div id="randomnum">
                 </div>
                 <hr class="mt-4">
                 <h4>User Number</h4>
                 <div id="user">
-                    User # addion
                 </div>
             </div>
             <div class="col-md-2 m-5" style="height: 150px;" id="box">
                 <h4>Score:</h4>
                 <div id="score">
-                    <div class="pt-3" id="win">Wins</div>
-                    <div class="pt-3" id="loses">Losses</div>
+                    <div class="pt-3" id="win">Wins: 0</div>
+                    <div class="pt-3" id="losses">Losses: 0</div>
                 </div>
             </div>
             <div class="row justify-content-center align-self-center">
@@ -46,16 +43,16 @@
         </div>
         <div class="row justify-content-center align-self-center mb-5">
             <div class="col-md-3" id="gem">
-                <img src="/assets/images/Screen Shot 2020-04-25 at 10.10.06 PM.png" alt="..." class="img-thumbnail">
+                <img src="/assets/images/Screen Shot 2020-04-25 at 10.10.06 PM.png" alt="..." class="img-thumbnail" id="grey">
             </div>
             <div class="col-md-3" id="gem">
-                <img src="/assets/images/Screen Shot 2020-04-25 at 10.10.51 PM.png" alt="..." class="img-thumbnail">
+                <img src="/assets/images/Screen Shot 2020-04-25 at 10.10.51 PM.png" alt="..." class="img-thumbnail" id="red">
             </div>
             <div class="col-md-3" id="gem">
-                <img src="/assets/images/Screen Shot 2020-04-25 at 10.11.05 PM.png" alt="..." class="img-thumbnail">
+                <img src="/assets/images/Screen Shot 2020-04-25 at 10.11.05 PM.png" alt="..." class="img-thumbnail" id="green">
             </div>
             <div class="col-md-3" id="gem">
-                <img src="/assets/images/Screen Shot 2020-04-25 at 10.11.17 PM.png" alt="..." class="img-thumbnail">
+                <img src="/assets/images/Screen Shot 2020-04-25 at 10.11.17 PM.png" alt="..." class="img-thumbnail" id="yellow">
             </div>
         </div>
     </div>
@@ -68,5 +65,6 @@
           </div>
         </div>
       </div>
+      <script src="/assets/javascript/game.js"></script>
 </body>
 </html>
