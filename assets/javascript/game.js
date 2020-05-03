@@ -33,11 +33,13 @@ function restart() {
 function winner(){
   win++;
   $("#win").text("Wins: "+win);
+  alert("You won!")
 }
 
 function losser(){
   lose++;
   $("#losses").text("Losses: "+lose);
+  alert("You lost! Try again :(")
 }
 
 //Assigning each crystals with what to do when they are clicked. It will determine if the user wins or lose in comparison of user# and computer#
